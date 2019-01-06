@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chat App by NodeJS and Socket.io</title>
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="process.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="header">Online Chat</div>
+
+		<div id="login">
+			<h2>Nhập tên để bắt đầu chat</h2>
+			<form id="formUser" onsubmit="return false;">
+				<input type="text" id="txtUser" placeholder="Nickname ..." autofocus>
+				<input type="submit" value="OK" id="btnUser">
+			</form>
+		</div>
+
+		<div id="chatbox">
+			<div id="left-div">
+				<div id="online-user-div">
+					<div class="online-title">Đang online</div>
+					<ul id="online-user"></ul>
+				</div>
+				
+				<div id="group-list-div">
+					<div class="online-title">Danh sách phòng chat</div>
+					<ul id="group-list"></ul>
+				</div>
+				<form id="formGroup" onsubmit="return false">
+					<input type="text" id="txtGroup">
+					<input type="submit" value="Tạo phòng">
+				</form>
+			</div>
+
+			<div id="right-div">
+				<h2>Xin chào <span id="user" style="color: blue;"></span> !</h2>
+				<div id="chat-content"></div>
+				<div id="user-typing"></div>
+				<form id="formChat" onsubmit="return false;">
+					<input type="text" id="txtMessage" placeholder="Tin nhắn ...">
+					<input type="button" id="btnSend" value="Gửi">
+				</form>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</body>
+</html>
