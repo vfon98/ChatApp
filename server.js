@@ -5,7 +5,7 @@ var io = require('socket.io')(server);
 
 app.use(express.static('public'));
 
-server.listen(8080, function() {
+server.listen(process.env.PORT || 3000 , function() {
 	console.log("listening port 8080");
 });
 app.get("/",  function(req, res) {

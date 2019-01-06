@@ -1,4 +1,5 @@
-var socket = io("http://localhost:8080");
+var socket = io("https://vphong-chatapp.herokuapp.com");
+// var socket = io("http://localhost:8080");
 
 socket.on('existed-user', function () {
 	alert('Tên bị trùng');
